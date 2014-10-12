@@ -1,0 +1,32 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: GSL-C
+scopeName: source.gsl.c
+fileTypes: [c.gsl, gsl]
+uuid: 27d5ed49-d837-416b-9590-22f5d6617613
+
+patterns:
+
+- comment: C Block Comment with GSL
+  name: comment.block.c
+  begin: (\/\*)
+  end: (\*\/)
+  patterns:
+  - include: source.gsl
+
+- comment: C Line Comment with GSL
+  name: comment.line.double-slash.c
+  begin: (//)
+  end: ((?=\n))
+  patterns:
+  - include: source.gsl
+
+- comment: C String with GSL
+  name: string.quoted.double.c
+  begin: (")
+  end: ((?<=[^\\])")
+  patterns:
+  - include: source.gsl
+
+- include: source.gsl
+- include: source.c

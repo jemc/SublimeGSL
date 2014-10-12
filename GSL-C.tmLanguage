@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>c.gsl</string>
+		<string>gsl</string>
+	</array>
+	<key>name</key>
+	<string>GSL-C</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>(\/\*)</string>
+			<key>comment</key>
+			<string>C Block Comment with GSL</string>
+			<key>end</key>
+			<string>(\*\/)</string>
+			<key>name</key>
+			<string>comment.block.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(//)</string>
+			<key>comment</key>
+			<string>C Line Comment with GSL</string>
+			<key>end</key>
+			<string>((?=\n))</string>
+			<key>name</key>
+			<string>comment.line.double-slash.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(")</string>
+			<key>comment</key>
+			<string>C String with GSL</string>
+			<key>end</key>
+			<string>((?&lt;=[^\\])")</string>
+			<key>name</key>
+			<string>string.quoted.double.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.gsl</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.c</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gsl.c</string>
+	<key>uuid</key>
+	<string>27d5ed49-d837-416b-9590-22f5d6617613</string>
+</dict>
+</plist>

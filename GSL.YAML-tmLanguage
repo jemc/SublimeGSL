@@ -1,0 +1,35 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: GSL
+scopeName: source.gsl
+fileTypes: []
+uuid: f4c3bb76-0f68-475d-a7c3-ad4d0236f8ad
+
+patterns:
+
+- comment: Block beginning with a template line
+  name: meta.embedded.block.gsl
+  begin: (^\s*\.\s*template)
+  end: (^\s*\.\s*endtemplate)
+  captures:
+    '1': {name: keyword.gsl}
+  patterns:
+  - include: source.gsl.body
+
+- comment: Line beginning with a dot
+  name: meta.embedded.dotline.gsl
+  begin: (^\s*\.)
+  end: ($)
+  captures:
+    '1': {name: keyword.gsl}
+  patterns:
+  - include: source.gsl.body
+
+- comment: Parentheses preceded by a dollar sign
+  name: meta.embedded.dollar.gsl
+  begin: (\$\()
+  end: (\))
+  captures:
+    '1': {name: keyword.gsl}
+  patterns:
+  - include: source.gsl.body

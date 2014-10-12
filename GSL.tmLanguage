@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array/>
+	<key>name</key>
+	<string>GSL</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>(^\s*\.\s*template)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.gsl</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Block beginning with a template line</string>
+			<key>end</key>
+			<string>(^\s*\.\s*endtemplate)</string>
+			<key>name</key>
+			<string>meta.embedded.block.gsl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl.body</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^\s*\.)</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.gsl</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Line beginning with a dot</string>
+			<key>end</key>
+			<string>($)</string>
+			<key>name</key>
+			<string>meta.embedded.dotline.gsl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl.body</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(\$\()</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.gsl</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Parentheses preceded by a dollar sign</string>
+			<key>end</key>
+			<string>(\))</string>
+			<key>name</key>
+			<string>meta.embedded.dollar.gsl</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl.body</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gsl</string>
+	<key>uuid</key>
+	<string>f4c3bb76-0f68-475d-a7c3-ad4d0236f8ad</string>
+</dict>
+</plist>

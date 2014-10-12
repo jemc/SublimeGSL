@@ -1,0 +1,69 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: GSL
+scopeName: source.gsl.body
+fileTypes: []
+uuid: 2d2f44c7-4240-481c-8f88-477993e9aab5
+
+patterns:
+- comment: Number
+  name: constant.numeric.gsl
+  match: ([0-9]+(.[0-9]+)?)
+
+- comment: String
+  name: string.quoted.double.gsl
+  begin: (")
+  end: ((?<=[^\\])")
+  patterns:
+  - include: source.gsl
+
+- comment: String
+  name: string.quoted.single.gsl
+  begin: (')
+  end: ((?<=[^\\])')
+  patterns:
+  - include: source.gsl
+
+- comment: End-of-line Comment
+  name: comment.line.gsl
+  match: ((#)[^\n]*)
+  captures:
+    '2': {name: punctuation.definition.comment.ruby}
+  end: \n
+
+- comment: Operator
+  name: keyword.operator.gsl
+  match: (\*|\/|\+|\-|\=|\<|\>|\||\&|\!|\?)
+
+- comment: Special Operator
+  name: keyword.operator.special.gsl
+  match: (\:)
+
+- comment: Punctuation
+  name: punctuation.separator.gsl
+  match: (\.|\(|\))
+
+- comment: Script Keyword
+  name: keyword.gsl
+  match: (\b(after|as|before|by|from|noalias|nostack|to|where)\b)
+
+- comment: Script Command Keyword
+  name: keyword.gsl
+  match: (\b(abort|append|close|copy|define|delete|echo|else|elsif|endfor|endfunction|endif|endmacro|endnew|endscope|endtemplate|endwhile|for|function|gsl|if|include|invoke|last|literal|macro|move|new|next|output|return|save|scope|sort|template|while|xml)\b)
+
+- comment: Function Call
+  name: meta.functioncall.gsl
+  begin: (([a-zA-Z_][a-zA-Z_\-0-9]*)\s*(\())
+  end: (\))
+  beginCaptures:
+    '2': {name: entity.name.function.gsl}
+    '3': {name: punctuation.separator.gsl}
+  endCaptures:
+    '1': {name: punctuation.separator.gsl}
+  patterns:
+  - include: source.gsl.body
+
+- comment: Identifier
+  name: entity.other.attribute-name.gsl
+  # name: variable.other.gsl
+  match: (\b([a-zA-Z_][a-zA-Z_\-0-9]*)\b)
