@@ -5,7 +5,7 @@
 	<key>fileTypes</key>
 	<array/>
 	<key>name</key>
-	<string>GSL</string>
+	<string>GSL (Body)</string>
 	<key>patterns</key>
 	<array>
 		<dict>

@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: GSL
+name: GSL (Body)
 scopeName: source.gsl.body
 fileTypes: []
 uuid: 2d2f44c7-4240-481c-8f88-477993e9aab5
