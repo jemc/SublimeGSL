@@ -10,7 +10,7 @@ patterns:
 - comment: Block beginning with a template line
   name: meta.embedded.block.gsl
   begin: (^\s*\.\s*template)
-  end: (^\s*\.\s*endtemplate)
+  end: (^\s*\.\s*endtemplate[^\n]*\n)
   captures:
     '1': {name: keyword.gsl}
   patterns:
@@ -19,7 +19,7 @@ patterns:
 - comment: Line beginning with a dot
   name: meta.embedded.dotline.gsl
   begin: (^\s*\.)
-  end: ($)
+  end: (\n)
   captures:
     '1': {name: keyword.gsl}
   patterns:

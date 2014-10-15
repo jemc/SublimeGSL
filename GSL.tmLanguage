@@ -22,7 +22,7 @@
 			<key>comment</key>
 			<string>Block beginning with a template line</string>
 			<key>end</key>
-			<string>(^\s*\.\s*endtemplate)</string>
+			<string>(^\s*\.\s*endtemplate[^\n]*\n)</string>
 			<key>name</key>
 			<string>meta.embedded.block.gsl</string>
 			<key>patterns</key>
@@ -47,7 +47,7 @@
 			<key>comment</key>
 			<string>Line beginning with a dot</string>
 			<key>end</key>
-			<string>($)</string>
+			<string>(\n)</string>
 			<key>name</key>
 			<string>meta.embedded.dotline.gsl</string>
 			<key>patterns</key>
