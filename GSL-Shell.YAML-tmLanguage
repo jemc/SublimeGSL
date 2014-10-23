@@ -1,0 +1,18 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: GSL-Shell
+scopeName: source.gsl.shell
+fileTypes: [sh.gsl, gsl]
+uuid: 4d17d43d-89bd-48a4-864e-fdf151040093
+
+patterns:
+
+- comment: Shell Line Comment with GSL
+  name: comment.line.double-slash.c
+  begin: (#)
+  end: ((?=\n))
+  patterns:
+  - include: source.gsl
+
+- include: source.gsl
+- include: source.shell

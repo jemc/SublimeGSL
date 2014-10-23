@@ -2,7 +2,7 @@
 ---
 name: GSL-C
 scopeName: source.gsl.c
-fileTypes: [c.gsl, gsl]
+fileTypes: [c.gsl]
 uuid: 27d5ed49-d837-416b-9590-22f5d6617613
 
 patterns:

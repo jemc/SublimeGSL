@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>sh.gsl</string>
+		<string>gsl</string>
+	</array>
+	<key>name</key>
+	<string>GSL-Shell</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>(#)</string>
+			<key>comment</key>
+			<string>Shell Line Comment with GSL</string>
+			<key>end</key>
+			<string>((?=\n))</string>
+			<key>name</key>
+			<string>comment.line.double-slash.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.gsl</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.shell</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gsl.shell</string>
+	<key>uuid</key>
+	<string>4d17d43d-89bd-48a4-864e-fdf151040093</string>
+</dict>
+</plist>
