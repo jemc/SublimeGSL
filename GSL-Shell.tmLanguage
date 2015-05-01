@@ -17,7 +17,7 @@
 			<key>comment</key>
 			<string>Shell Line Comment with GSL</string>
 			<key>end</key>
-			<string>((?=\n))</string>
+			<string>(.$)</string>
 			<key>name</key>
 			<string>comment.line.double-slash.c</string>
 			<key>patterns</key>
