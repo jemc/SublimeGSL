@@ -1,0 +1,39 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: GSL-Ruby
+scopeName: source.gsl.ruby
+fileTypes: [rb.gsl]
+uuid: c8aa9584-a2d1-4701-b904-887e15c5f9fa
+
+patterns:
+
+- comment: Ruby Line Comment with GSL
+  name: comment.line.ruby
+  begin: (\s*#)
+  end: ($)
+  patterns:
+  - include: source.gsl
+
+- comment: Ruby Block Comment with GSL
+  name: comment.block.ruby
+  begin: (^=begin)
+  end: (^=end)
+  patterns:
+  - include: source.gsl
+
+- comment: Ruby String with GSL
+  name: string.quoted.double.ruby
+  begin: (")
+  end: ((?<=[^\\])")
+  patterns:
+  - include: source.gsl
+
+- comment: Ruby String with GSL
+  name: string.quoted.single.ruby
+  begin: (')
+  end: ((?<=[^\\])')
+  patterns:
+  - include: source.gsl
+
+- include: source.gsl
+- include: source.ruby

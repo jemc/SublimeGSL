@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rb.gsl</string>
+	</array>
+	<key>name</key>
+	<string>GSL-Ruby</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>(\s*#)</string>
+			<key>comment</key>
+			<string>Ruby Line Comment with GSL</string>
+			<key>end</key>
+			<string>($)</string>
+			<key>name</key>
+			<string>comment.line.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^=begin)</string>
+			<key>comment</key>
+			<string>Ruby Block Comment with GSL</string>
+			<key>end</key>
+			<string>(^=end)</string>
+			<key>name</key>
+			<string>comment.block.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(")</string>
+			<key>comment</key>
+			<string>Ruby String with GSL</string>
+			<key>end</key>
+			<string>((?&lt;=[^\\])")</string>
+			<key>name</key>
+			<string>string.quoted.double.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(')</string>
+			<key>comment</key>
+			<string>Ruby String with GSL</string>
+			<key>end</key>
+			<string>((?&lt;=[^\\])')</string>
+			<key>name</key>
+			<string>string.quoted.single.ruby</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.gsl</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.gsl</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>source.ruby</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.gsl.ruby</string>
+	<key>uuid</key>
+	<string>c8aa9584-a2d1-4701-b904-887e15c5f9fa</string>
+</dict>
+</plist>
